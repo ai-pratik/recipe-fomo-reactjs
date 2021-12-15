@@ -28,12 +28,14 @@ function App() {
       <form className="app__searchForm" onSubmit={onSubmit}>
         <input type="text"
           className="app__input"
-          placeholder="Biryani..Apple..something else"
+          placeholder="Spinach..Apple..something else"
           value={query}
           onChange={(e) => setquery(e.target.value)}
         />
         <input type="submit" className="app__submit" value="Search" />
         <select className="app__healthlables">
+        
+        <option onClick={() => sethealthLabel("alcohol-free")}>ALL</option>
           <option onClick={() => sethealthLabel("vegan")}>Vegan</option>
           <option onClick={() => sethealthLabel("vegetarian")}>Vegetarian</option>
           <option onClick={() => sethealthLabel("dairy-free")}>dairy-free</option>
